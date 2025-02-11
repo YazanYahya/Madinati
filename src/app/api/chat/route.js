@@ -61,7 +61,7 @@ export async function POST(req) {
                 .map((msg) => ({role: msg.role, content: msg.content}))
         ];
 
-        const aiResponse = await getGroqResponse("llama-3.1-8b-instant", transformedMessages)
+        const aiResponse = await getGroqResponse("llama-3.3-70b-versatile", transformedMessages)
 
         return NextResponse.json({content: aiResponse});
     } catch (error) {
