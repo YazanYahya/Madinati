@@ -2,9 +2,9 @@ import {Avatar} from "@/components/ui/avatar"
 import {cn} from "@/lib/utils"
 import {Building2, User2} from "lucide-react"
 
-export default function Message({content, type}) {
-    const isUser = type === "user"
-    const isTyping = type === "typing"
+export default function Message({content, role}) {
+    const isUser = role === "user";
+    const isTyping = role === "typing";
 
     return (
         (<div className={cn("flex", isUser ? "justify-start" : "justify-end")}>
